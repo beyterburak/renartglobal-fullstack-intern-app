@@ -1,4 +1,4 @@
-# Gold Rings Catalog - Full Stack Application
+# Rings Catalog - Full Stack Application
 
 A modern product listing application featuring real-time gold pricing, dynamic price calculations, and an elegant carousel interface.
 
