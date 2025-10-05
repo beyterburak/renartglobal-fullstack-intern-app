@@ -89,7 +89,11 @@ ALLOWED_ORIGINS=http://localhost:5173, https://renartglobal-fullstack-intern-app
 
 ### Frontend (.env)
 ```env
-VITE_API_URL=http://localhost:3000/api || https://renartglobal-fullstack-intern-backend.onrender.com/api
+# Development
+VITE_API_URL=http://localhost:3000/api
+
+# Production (Vercel)
+VITE_API_URL=https://renartglobal-fullstack-intern-backend.onrender.com/api
 ```
 
 ## 📡 API Documentation
