@@ -5,7 +5,7 @@ A modern product listing application featuring real-time gold pricing, dynamic p
 ## 🌟 Live Demo
 
 - **Frontend:** https://renartglobal-fullstack-intern-app.vercel.app
-- **Backend API:** https://renartglobal-fullstack-intern-backend.onrender.com/api
+- **Backend API:** https://renartglobal-fullstack-intern-backend.onrender.com/api/products
 
 ## 📋 Assignment Overview
 
