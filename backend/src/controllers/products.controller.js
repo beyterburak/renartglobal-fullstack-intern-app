@@ -9,15 +9,25 @@ const {
  * GET /api/products
  * Returns all products with calculated prices
  * Supports filtering via query params
+ * 
+ * Filter Usage Examples:
+ * - /api/products?minPrice=100 (products with price >= $100)
+ * - /api/products?maxPrice=500 (products with price <= $500)
+ * - /api/products?minPrice=100&maxPrice=500 (products between $100-$500)
+ * - /api/products?minPopularity=0.5 (products with popularity >= 0.5/1.0)
+ * - /api/products?maxPopularity=0.8 (products with popularity <= 0.8/1.0)
+ * - /api/products?minPopularity=0.3&maxPopularity=0.9 (popularity between 0.3-0.9)
+ * - /api/products?minPrice=200&minPopularity=0.6 (combine price and popularity filters)
  */
 async function getAllProducts(req, res, next) {
     try {
-        // Get query filters
+        // Get query filters from request parameters
+        // These will be undefined if not provided, which is handled in filterProducts function
         const filters = {
-            minPrice: req.query.minPrice,
-            maxPrice: req.query.maxPrice,
-            minPopularity: req.query.minPopularity,
-            maxPopularity: req.query.maxPopularity
+            minPrice: req.query.minPrice,        // Minimum price filter (USD)
+            maxPrice: req.query.maxPrice,        // Maximum price filter (USD)
+            minPopularity: req.query.minPopularity, // Minimum popularity score (0-1)
+            maxPopularity: req.query.maxPopularity  // Maximum popularity score (0-1)
         };
 
         // Get gold price
